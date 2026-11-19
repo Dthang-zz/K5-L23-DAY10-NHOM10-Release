@@ -2,7 +2,7 @@
   <img src="docs/assets/hero.png" alt="Day 10 Lab: Bàn giao dataset và Truy vết" width="100%">
 </p>
 
-# Day 10 Lab — Bàn giao dataset & Truy vết
+# Day 10 Lab — Nhóm 10
 
 <p align="center">
   <img alt="nhóm" src="https://img.shields.io/badge/lab-nhóm%205–6%20người-0b1f3a">
@@ -18,14 +18,14 @@
 
 Nhóm nhận một lô 250 ảnh có cả nhãn **detection** và **panoptic**, cùng giấy tờ đi kèm (người gán, người kiểm, guideline, ticket của team AI). Trong lô có lỗi được gài theo seed. **Số lỗi mỗi loại thay đổi theo seed** và lô **không kèm nhãn gốc**.
 
-| Việc | Công cụ |
-|---|---|
-| Bắt lỗi luật (file, hash, class, box, split, guideline) | **`validator/` do nhóm tự viết** |
-| Đối chiếu detection ↔ panoptic, mở ảnh xem từng ứng viên | validator + `review_log.csv` |
-| Quyết định Release / Hold theo ngưỡng 2%, ghi lineage | `lineage.py` |
-| Bàn giao lô v2: manifest + sha256, label summary, truy vết, rework | `pack_release.py`, `check_handover.py` |
-| Truy vết ticket: ảnh nào, tầng nào, báo ai | `trace.json` |
-| Đo chính mình | `score_findings.py` (F1: báo thừa bị trừ như bỏ sót) |
+| Việc                                                               | Công cụ                                              |
+| ------------------------------------------------------------------ | ---------------------------------------------------- |
+| Bắt lỗi luật (file, hash, class, box, split, guideline)            | **`validator/` do nhóm tự viết**                     |
+| Đối chiếu detection ↔ panoptic, mở ảnh xem từng ứng viên           | validator + `review_log.csv`                         |
+| Quyết định Release / Hold theo ngưỡng 2%, ghi lineage              | `lineage.py`                                         |
+| Bàn giao lô v2: manifest + sha256, label summary, truy vết, rework | `pack_release.py`, `check_handover.py`               |
+| Truy vết ticket: ảnh nào, tầng nào, báo ai                         | `trace.json`                                         |
+| Đo chính mình                                                      | `score_findings.py` (F1: báo thừa bị trừ như bỏ sót) |
 
 ![Hai loại lỗi](docs/assets/two_kinds.png)
 
@@ -70,6 +70,7 @@ flowchart LR
 <summary><b>Vì sao không có nhãn gốc để so?</b></summary>
 
 Ngoài đời, người kiểm chỉ có ảnh và nhãn được giao. Nếu có sẵn nhãn đúng thì đã không cần QC. Ở bản trước của lab, một script diff khoảng 40 dòng với nhãn gốc đạt điểm tối đa trên mọi seed. Bản này bỏ lối đó:
+
 - Lỗi gán nhãn chỉ thấy khi **đối chiếu hai nguồn** (detection và panoptic của cùng ảnh).
 - Sau đó phải **mở ảnh ra xem** để biết bên nào sai.
 </details>
@@ -79,17 +80,19 @@ Ngoài đời, người kiểm chỉ có ảnh và nhãn được giao. Nếu c�
 
 Không có lợi. Điểm là **F1**, nên báo thừa bị trừ như bỏ sót. Detection và panoptic của COCO vốn lệch nhau tự nhiên (vật bị che, crowd), nên với cách ghép thô, nhiều ứng viên **không phải lỗi**. Khi giảng viên thử bằng một validator ghép thô:
 
-| Cách làm | F1 |
-|---|---|
-| Chỉ kiểm luật | khoảng 0,7 |
-| Báo hết ứng viên mà không xem ảnh | khoảng 0,6 |
-| Đối chiếu đúng cộng xem ảnh cẩn thận | trên 0,9 |
+| Cách làm                             | F1         |
+| ------------------------------------ | ---------- |
+| Chỉ kiểm luật                        | khoảng 0,7 |
+| Báo hết ứng viên mà không xem ảnh    | khoảng 0,6 |
+| Đối chiếu đúng cộng xem ảnh cẩn thận | trên 0,9   |
+
 </details>
 
 <details>
 <summary><b>PASS của <code>check_handover.py</code> có nghĩa là nhãn đúng không?</b></summary>
 
 Không. PASS chỉ nói lô v2 **đúng định dạng và nhất quán**: hash, số liệu, truy vết, ngưỡng, lineage. Nhãn đúng hay sai vẫn là việc của người xem ảnh.
+
 </details>
 
 <details>
@@ -102,16 +105,16 @@ Không. PASS chỉ nói lô v2 **đúng định dạng và nhất quán**: hash,
 
 ## Tài liệu
 
-| Bạn cần | Xem |
-|---|---|
-| Các pha và lệnh chạy | [GUIDE.md](GUIDE.md) |
-| Mốc tiến độ 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Quy tắc làm bài, dùng AI | [RULES.md](RULES.md) |
-| Chấm điểm (100 điểm) | [RUBRIC.md](RUBRIC.md) |
-| Sản phẩm phải nộp, tên repo | [SUBMISSION.md](SUBMISSION.md) |
-| Định dạng lô, các loại lỗi, format `errors.json` | [docs/DELIVERY.md](docs/DELIVERY.md) |
-| Các script | [scripts/README.md](scripts/README.md) |
-| Mẫu file phải điền | [templates/](templates/) |
+| Bạn cần                                          | Xem                                    |
+| ------------------------------------------------ | -------------------------------------- |
+| Các pha và lệnh chạy                             | [GUIDE.md](GUIDE.md)                   |
+| Mốc tiến độ 4 giờ                                | [CHECKPOINTS.md](CHECKPOINTS.md)       |
+| Quy tắc làm bài, dùng AI                         | [RULES.md](RULES.md)                   |
+| Chấm điểm (100 điểm)                             | [RUBRIC.md](RUBRIC.md)                 |
+| Sản phẩm phải nộp, tên repo                      | [SUBMISSION.md](SUBMISSION.md)         |
+| Định dạng lô, các loại lỗi, format `errors.json` | [docs/DELIVERY.md](docs/DELIVERY.md)   |
+| Các script                                       | [scripts/README.md](scripts/README.md) |
+| Mẫu file phải điền                               | [templates/](templates/)               |
 
 ## Bạn học được gì
 
