@@ -1,0 +1,10 @@
+image,type,verdict,note
+img_0028,class_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] Box trong ảnh là motorcycle"
+img_0061,category_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] Box trong ảnh đúng là cake"
+img_0238,class_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] Box là chair chứ không phải bench"
+img_0171,instance_merge,confirmed,"[Tạ Đức Thắng / 2A202603163] có 2 ba lô riêng (mỗi cái 1 box) nhưng mask tím tô liền thành 1 vùng"
+img_0079,missing_box,confirmed,"[Tạ Đức Thắng / 2A202603163] Thiếu box cho con mèo"
+img_0178,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box car đang bị lệch sang phải và chưa bao đc vật"
+img_0245,missing_box,confirmed,"[Tạ Đức Thắng / 2A202603163] Thiếu bbox cho toilet"
+img_0117,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box elephant bị lệch sang trái"
+img_0045,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box keyboard chưa bao hết vật"

@@ -1,0 +1,183 @@
+{
+ "candidates": [
+  {
+   "image": "img_0028",
+   "type": "class_or_category_swap",
+   "score": 0.996,
+   "class_det": "bicycle",
+   "class_pan": "motorcycle",
+   "box": [
+    0.0,
+    2.1,
+    334.6,
+    418.9
+   ],
+   "seg_bbox": [
+    0,
+    2,
+    334,
+    418
+   ],
+   "seg_id": 4740142,
+   "reason": "cùng vị trí (IoU 1.00) nhưng detection ghi 'bicycle', panoptic ghi 'motorcycle': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "img_0061",
+   "type": "class_or_category_swap",
+   "score": 0.992,
+   "class_det": "cake",
+   "class_pan": "donut",
+   "box": [
+    536.2,
+    95.4,
+    640.0,
+    216.7
+   ],
+   "seg_bbox": [
+    536,
+    95,
+    640,
+    217
+   ],
+   "seg_id": 15218723,
+   "reason": "cùng vị trí (IoU 0.99) nhưng detection ghi 'cake', panoptic ghi 'donut': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "img_0238",
+   "type": "class_or_category_swap",
+   "score": 0.972,
+   "class_det": "bench",
+   "class_pan": "chair",
+   "box": [
+    47.6,
+    69.4,
+    92.7,
+    123.4
+   ],
+   "seg_bbox": [
+    48,
+    69,
+    93,
+    123
+   ],
+   "seg_id": 9343047,
+   "reason": "cùng vị trí (IoU 0.97) nhưng detection ghi 'bench', panoptic ghi 'chair': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "img_0171",
+   "type": "instance_merge",
+   "score": 0.479,
+   "class_det": "backpack",
+   "class_pan": "backpack",
+   "box": [
+    59.1,
+    187.3,
+    84.4,
+    231.3
+   ],
+   "seg_bbox": [
+    59,
+    187,
+    168,
+    313
+   ],
+   "seg_id": 15964588,
+   "reason": "segment backpack trải trên 2 box backpack tách biệt; phần riêng trong mỗi box 52% / 48% pixel"
+  },
+  {
+   "image": "img_0079",
+   "type": "missing_box",
+   "score": 0.141,
+   "class_det": null,
+   "class_pan": "cat",
+   "box": null,
+   "seg_bbox": [
+    161,
+    156,
+    536,
+    375
+   ],
+   "seg_id": 15473703,
+   "reason": "segment cat 38450 px (14.1% ảnh) không có box cùng lớp (phủ tối đa 0%)"
+  },
+  {
+   "image": "img_0178",
+   "type": "bbox_drift",
+   "score": 0.131,
+   "class_det": "car",
+   "class_pan": "car",
+   "box": [
+    494.8,
+    145.8,
+    620.1,
+    208.9
+   ],
+   "seg_bbox": [
+    482,
+    142,
+    597,
+    200
+   ],
+   "seg_id": 642217,
+   "reason": "chỉ 87% pixel của segment nằm trong box (IoU bbox 0.61)"
+  },
+  {
+   "image": "img_0245",
+   "type": "missing_box",
+   "score": 0.1,
+   "class_det": null,
+   "class_pan": "toilet",
+   "box": null,
+   "seg_bbox": [
+    378,
+    219,
+    548,
+    480
+   ],
+   "seg_id": 6388878,
+   "reason": "segment toilet 30816 px (10.0% ảnh) không có box cùng lớp (phủ tối đa 0%)"
+  },
+  {
+   "image": "img_0117",
+   "type": "bbox_drift",
+   "score": 0.07,
+   "class_det": "elephant",
+   "class_pan": "elephant",
+   "box": [
+    196.0,
+    51.8,
+    343.1,
+    229.6
+   ],
+   "seg_bbox": [
+    245,
+    75,
+    365,
+    220
+   ],
+   "seg_id": 11860669,
+   "reason": "chỉ 93% pixel của segment nằm trong box (IoU bbox 0.48)"
+  },
+  {
+   "image": "img_0045",
+   "type": "bbox_drift",
+   "score": 0.061,
+   "class_det": "keyboard",
+   "class_pan": "keyboard",
+   "box": [
+    294.0,
+    147.3,
+    390.6,
+    204.3
+   ],
+   "seg_bbox": [
+    277,
+    142,
+    386,
+    207
+   ],
+   "seg_id": 6972559,
+   "reason": "chỉ 94% pixel của segment nằm trong box (IoU bbox 0.71)"
+  }
+ ]
+}
