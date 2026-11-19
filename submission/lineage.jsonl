@@ -1,0 +1,4 @@
+{"event": "inject", "release_id": "lab250_cc2a8eefdd81", "seed": 10007, "detail": "r10007"}
+{"event": "train", "release_id": "lab250_cc2a8eefdd81", "run_id": "R-021"}
+{"event": "decision", "release_id": "lab250_cc2a8eefdd81", "decision": "HOLD", "detail": "QC v1 >2% anh loi (13 loi luat/250 truoc review)"}
+{"event": "release", "release_id": "lab250_cc2a8eefdd81_v2", "parent": "lab250_cc2a8eefdd81", "detail": "v2 detection: tach rework, sua hash/guideline/split"}
