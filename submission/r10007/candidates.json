@@ -1,0 +1,183 @@
+{
+ "candidates": [
+  {
+   "image": "000000014888",
+   "type": "class_or_category_swap",
+   "score": 0.998,
+   "class_det": "sheep",
+   "class_pan": "cow",
+   "box": [
+    0.0,
+    3.1,
+    639.3,
+    441.5
+   ],
+   "seg_bbox": [
+    0,
+    3,
+    639,
+    441
+   ],
+   "seg_id": 2766656,
+   "reason": "cùng vị trí (IoU 1.00) nhưng detection ghi 'sheep', panoptic ghi 'cow': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "000000009769",
+   "type": "class_or_category_swap",
+   "score": 0.996,
+   "class_det": "car",
+   "class_pan": "truck",
+   "box": [
+    84.6,
+    187.8,
+    463.8,
+    376.7
+   ],
+   "seg_bbox": [
+    85,
+    188,
+    464,
+    377
+   ],
+   "seg_id": 5263205,
+   "reason": "cùng vị trí (IoU 1.00) nhưng detection ghi 'car', panoptic ghi 'truck': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "000000016249",
+   "type": "class_or_category_swap",
+   "score": 0.988,
+   "class_det": "bench",
+   "class_pan": "couch",
+   "box": [
+    376.3,
+    153.6,
+    470.6,
+    261.7
+   ],
+   "seg_bbox": [
+    376,
+    154,
+    471,
+    262
+   ],
+   "seg_id": 1776159,
+   "reason": "cùng vị trí (IoU 0.99) nhưng detection ghi 'bench', panoptic ghi 'couch': mở ảnh xem bên nào sai"
+  },
+  {
+   "image": "000000019402",
+   "type": "missing_box",
+   "score": 0.383,
+   "class_det": null,
+   "class_pan": "person",
+   "box": null,
+   "seg_bbox": [
+    261,
+    1,
+    638,
+    475
+   ],
+   "seg_id": 4948109,
+   "reason": "segment person 117513 px (38.3% ảnh) không có box cùng lớp (phủ tối đa 19%)"
+  },
+  {
+   "image": "000000015440",
+   "type": "instance_merge",
+   "score": 0.248,
+   "class_det": "bus",
+   "class_pan": "bus",
+   "box": [
+    192.3,
+    182.7,
+    262.2,
+    260.8
+   ],
+   "seg_bbox": [
+    114,
+    183,
+    262,
+    261
+   ],
+   "seg_id": 5393787,
+   "reason": "segment bus trải trên 2 box bus tách biệt; phần riêng trong mỗi box 75% / 25% pixel"
+  },
+  {
+   "image": "000000009772",
+   "type": "bbox_drift",
+   "score": 0.205,
+   "class_det": "tv",
+   "class_pan": "tv",
+   "box": [
+    406.1,
+    77.7,
+    498.9,
+    176.4
+   ],
+   "seg_bbox": [
+    427,
+    91,
+    517,
+    187
+   ],
+   "seg_id": 3825532,
+   "reason": "chỉ 79% pixel của segment nằm trong box (IoU bbox 0.53)"
+  },
+  {
+   "image": "000000017905",
+   "type": "bbox_drift",
+   "score": 0.193,
+   "class_det": "person",
+   "class_pan": "person",
+   "box": [
+    60.8,
+    141.5,
+    180.2,
+    506.2
+   ],
+   "seg_bbox": [
+    81,
+    229,
+    201,
+    594
+   ],
+   "seg_id": 12960980,
+   "reason": "chỉ 81% pixel của segment nằm trong box (IoU bbox 0.46)"
+  },
+  {
+   "image": "000000022192",
+   "type": "bbox_drift",
+   "score": 0.172,
+   "class_det": "dog",
+   "class_pan": "dog",
+   "box": [
+    94.8,
+    142.0,
+    238.8,
+    397.3
+   ],
+   "seg_bbox": [
+    72,
+    121,
+    216,
+    376
+   ],
+   "seg_id": 2172724,
+   "reason": "chỉ 83% pixel của segment nằm trong box (IoU bbox 0.63)"
+  },
+  {
+   "image": "000000003156",
+   "type": "missing_box",
+   "score": 0.129,
+   "class_det": null,
+   "class_pan": "toilet",
+   "box": null,
+   "seg_bbox": [
+    256,
+    248,
+    443,
+    616
+   ],
+   "seg_id": 10066329,
+   "reason": "segment toilet 36542 px (12.9% ảnh) không có box cùng lớp (phủ tối đa 0%)"
+  }
+ ]
+}

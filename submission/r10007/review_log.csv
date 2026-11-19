@@ -1,0 +1,10 @@
+image,type,verdict,note
+000000014888,class_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] con vật là bò, detection ghi sheep sai"
+000000009769,category_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] Xe trong ảnh là car."
+000000016249,category_swap,confirmed,"[Tạ Đức Thắng / 2A202603163] Vùng màu tím trong ảnh là bench"
+000000019402,missing_box,confirmed,"[Tạ Đức Thắng / 2A202603163] Vùng tím person là phải một vật thật"
+000000015440,instance_merge,confirmed,"[Tạ Đức Thắng / 2A202603163] Vùng tím bus có phải hai vật riêng (mỗi vật một box) bị tô chung thành một segment"
+000000009772,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box tv lệch rõ khỏi vật (hụt một phần vật, thừa nền)"
+000000017905,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box lệch rõ khỏi vật (hụt một phần vật, thừa nền)"
+000000022192,bbox_drift,confirmed,"[Tạ Đức Thắng / 2A202603163] Box lệch rõ khỏi vật (hụt một phần vật, thừa nền)"
+000000003156,missing_box,confirmed,"[Tạ Đức Thắng / 2A202603163] Box toilet là vật thật, ôm sát vật"
